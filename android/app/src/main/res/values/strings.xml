@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">findPlaces</string>
+    <string name="google_maps_api_key">21a6b31db87717a10a78ebaf879e78c2</string>
+
 </resources>

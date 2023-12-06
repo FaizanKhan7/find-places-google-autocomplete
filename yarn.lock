@@ -1893,6 +1893,11 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
+"@types/geojson@^7946.0.10":
+  "integrity" "sha512-bmrNrgKMOhM3WsafmbGmC+6dsF2Z308vLFsQ3a/bT8X8Sv5clVYpPars/UPq+sAaJP+5OoLAYgwbkS5QEJdLUQ=="
+  "resolved" "https://registry.npmjs.org/@types/geojson/-/geojson-7946.0.13.tgz"
+  "version" "7946.0.13"
+
 "@types/graceful-fs@^4.1.3":
   "integrity" "sha512-olP3sd1qOEe5dXTSaFvQG+02VdRXcdytWLAZsAq1PecU8uqQAhkrnbli7DagjtXKW/Bl7YJbUsa8MPcuc8LHEQ=="
   "resolved" "https://registry.npmjs.org/@types/graceful-fs/-/graceful-fs-4.1.9.tgz"
@@ -6122,6 +6127,11 @@
   "resolved" "https://registry.npmjs.org/react-native-collapsible/-/react-native-collapsible-1.6.1.tgz"
   "version" "1.6.1"
 
+"react-native-config@^1.5.1":
+  "integrity" "sha512-g1xNgt1tV95FCX+iWz6YJonxXkQX0GdD3fB8xQtR1GUBEqweB9zMROW77gi2TygmYmUkBI7LU4pES+zcTyK4HA=="
+  "resolved" "https://registry.npmjs.org/react-native-config/-/react-native-config-1.5.1.tgz"
+  "version" "1.5.1"
+
 "react-native-gesture-handler@^2.14.0", "react-native-gesture-handler@^2.2.1":
   "integrity" "sha512-cOmdaqbpzjWrOLUpX3hdSjsMby5wq3PIEdMq7okJeg9DmCzanysHSrktw1cXWNc/B5MAgxAn9J7Km0/4UIqKAQ=="
   "resolved" "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.14.0.tgz"
@@ -6142,6 +6152,13 @@
     "prop-types" "^15.7.2"
     "qs" "~6.9.1"
 
+"react-native-maps@^1.8.0":
+  "integrity" "sha512-KfVZ03L42+a22Fkcl2uDe5d+73BweTlcRUzm2G+aQUJ7fHrBxj7CuXWtKMSNpVDiO3YDCWcshiiyjSXxkd/qOw=="
+  "resolved" "https://registry.npmjs.org/react-native-maps/-/react-native-maps-1.8.0.tgz"
+  "version" "1.8.0"
+  dependencies:
+    "@types/geojson" "^7946.0.10"
+
 "react-native-modal-popover@^2.0.1":
   "integrity" "sha512-2UrLzBNNTlR6uisJTWyDg6qFC0Qi8Fx3a6UrPS0bQBlUpo0MRPRVMCK5t8RIrTI6EoK1FMbnm+u8UOOboBJWgw=="
   "resolved" "https://registry.npmjs.org/react-native-modal-popover/-/react-native-modal-popover-2.1.3.tgz"
@@ -6150,7 +6167,7 @@
     "lodash" ">4.17.0"
     "prop-types" "^15.8.1"
 
-"react-native@*", "react-native@>= 0.59", "react-native@>=0.57", "react-native@>=0.59", "react-native@>=0.62", "react-native@>=0.64.1", "react-native@>=0.71", "react-native@>0.50.0", "react-native@0.72.7":
+"react-native@*", "react-native@>= 0.59", "react-native@>= 0.64.3", "react-native@>=0.57", "react-native@>=0.59", "react-native@>=0.62", "react-native@>=0.64.1", "react-native@>=0.71", "react-native@>0.50.0", "react-native@0.72.7":
   "integrity" "sha512-dqVFojOO9rOvyFbbM3/v9/GJR355OSuBhEY4NQlMIRc2w0Xch5MT/2uPoq3+OvJ+5h7a8LFAco3fucSffG0FbA=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.72.7.tgz"
   "version" "0.72.7"
@@ -6222,7 +6239,7 @@
     "react-shallow-renderer" "^16.15.0"
     "scheduler" "^0.23.0"
 
-"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0", "react@^18.2.0", "react@>=16", "react@>=16.0", "react@>=16.0.0", "react@>=17.0.1", "react@>16.0.0", "react@18.2.0":
+"react@*", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^18.0", "react@^18.2.0", "react@>= 17.0.1", "react@>=16", "react@>=16.0", "react@>=16.0.0", "react@>=17.0.1", "react@>16.0.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
