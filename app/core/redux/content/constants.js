@@ -1,0 +1,1 @@
+export const GET_RECENT_SEARCH = 'GET_RECENT_SEARCH';

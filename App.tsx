@@ -1,7 +1,19 @@
 import React, {useState} from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+
+import {
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  LogBox,
+} from 'react-native';
 import {AutoCompleteInput, RecentSearches} from './app/view/components';
 import MapView from './app/view/components/Map/Map';
+import {Provider} from 'react-redux';
+import store from './app/core/redux/store';
+
+LogBox.ignoreAllLogs();
 
 function App(): JSX.Element {
   interface Place {
@@ -39,21 +51,19 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.container}>
-        <View>
-          <Text style={styles.title}>Find Places 📍🌏</Text>
-        </View>
+    <Provider store={store}>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.container}>
+          <View>
+            <Text style={styles.title}>Find Places 📍🌏</Text>
+          </View>
 
-        <AutoCompleteInput onPlaceSelected={handlePlaceSelected} />
-        <MapView
-          markers={markers}
-          initialRegion={initialRegion}
-          region={initialRegion}
-        />
-        <RecentSearches />
-      </View>
-    </SafeAreaView>
+          <AutoCompleteInput onPlaceSelected={handlePlaceSelected} />
+          <MapView markers={markers} initialRegion={initialRegion} />
+          <RecentSearches />
+        </View>
+      </SafeAreaView>
+    </Provider>
   );
 }
 

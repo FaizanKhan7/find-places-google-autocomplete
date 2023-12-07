@@ -1,5 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
+import Config from 'react-native-config';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 
 import styles from './styles';
@@ -10,7 +11,7 @@ const AutoCompleteInput = ({onPlaceSelected}) => {
       <View style={styles.searchSection}>
         <GooglePlacesAutocomplete
           placeholder="Search for a place"
-          query={{key: 'AIzaSyB9XiiGf_Lnq_abc7GzhkJkX8MS6INop6s'}}
+          query={{key: Config.GOOGLE_MAPS_API_KEY}}
           fetchDetails={true}
           onPress={
             (data, details = null) => onPlaceSelected(data, details) // Call the onPlaceSelected function with selected data
