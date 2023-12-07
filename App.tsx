@@ -1,21 +1,16 @@
 import React, {useState} from 'react';
+import {SafeAreaView, StyleSheet, Text, View, LogBox} from 'react-native';
+import {Provider, useDispatch} from 'react-redux';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  LogBox,
-} from 'react-native';
+import store from './app/core/redux/store';
+import {getRecentSearchAction} from './app/core/redux/content/action';
+
 import {AutoCompleteInput, RecentSearches} from './app/view/components';
 import MapView from './app/view/components/Map/Map';
-import {Provider} from 'react-redux';
-import store from './app/core/redux/store';
 
 LogBox.ignoreAllLogs();
 
-function App(): JSX.Element {
+const App = () => {
   interface Place {
     latitude: number;
     longitude: number;
@@ -30,6 +25,8 @@ function App(): JSX.Element {
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,
   });
+  const dispatch = useDispatch();
+
   const markers = selectedPlace ? [selectedPlace] : [];
 
   const handlePlaceSelected = (data: any, details: any) => {
@@ -48,6 +45,8 @@ function App(): JSX.Element {
       latitudeDelta: 0.0922,
       longitudeDelta: 0.0421,
     });
+
+    dispatch(getRecentSearchAction(details.formatted_address));
   };
 
   return (
@@ -65,7 +64,7 @@ function App(): JSX.Element {
       </SafeAreaView>
     </Provider>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
